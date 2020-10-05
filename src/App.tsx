@@ -12,7 +12,7 @@ function App() {
 
   return (
       <div className="bg-gray-400 h-full">
-        <div className="grid place-content-center text-center h-full"   >
+        <div className="grid place-content-center text-center h-full">
 
           {/*
             <UncontrolledAccordion titleValue={"Menu"} />
@@ -25,7 +25,7 @@ function App() {
           <Rating value={ratingValue} onStarClick={setRatingValue}/>
 
           <Accordion titleValue={"Menu"} collapsed={accordionCollapsed}
-                     onclick={() => setAccordionCollapsed(!accordionCollapsed)}/>
+                     onClickMyFn={() => setAccordionCollapsed(!accordionCollapsed)}/>
         </div>
       </div>
 
