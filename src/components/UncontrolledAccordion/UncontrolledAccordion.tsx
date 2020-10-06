@@ -5,7 +5,7 @@ type AccordionPropsType = {
 
 }
 
-function UncontrolledAccordion(props: AccordionPropsType) {
+export function UncontrolledAccordion(props: AccordionPropsType) {
     console.log("Accordion rendered")
 
 
@@ -43,6 +43,3 @@ function AccordionBody() {
         </ul>
     );
 }
-
-
-export default UncontrolledAccordion;

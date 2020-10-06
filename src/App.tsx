@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Rating, RatingValueType} from "./components/Rating/Rating";
-import OnOff from "./components/OnnOff/OnOff";
-import Accordion from "./components/Acrordion/Acordion";
+import {OnOff} from "./components/OnOff/OnOff";
+import {Accordion} from './components/Accordion/Accordion';
 
 function App() {
   console.log("App rendered")
@@ -14,16 +14,8 @@ function App() {
       <div className="bg-gray-400 h-full">
         <div className="grid place-content-center text-center h-full">
 
-          {/*
-            <UncontrolledAccordion titleValue={"Menu"} />
-            <UncontrolledAccordion titleValue={"Users"} />
-
-            <UncontrolledRating/>*/}
-
           <OnOff value={value} setOnOffValue={() => setOnOffValue(!value)}/>
-
           <Rating value={ratingValue} onStarClick={setRatingValue}/>
-
           <Accordion titleValue={"Menu"} collapsed={accordionCollapsed}
                      onClickMyFn={() => setAccordionCollapsed(!accordionCollapsed)}/>
         </div>

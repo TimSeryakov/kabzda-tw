@@ -6,10 +6,10 @@ type AccordionPropsType = {
     onClickMyFn: () => void
 }
 
-function Accordion(props: AccordionPropsType) {
+export function Accordion(props: AccordionPropsType) {
     console.log("Accordion rendered")
         return (
-            <div className="bg-gray-200 border-4 border-black rounded-md" >
+            <div className="px-3 bg-gray-200 border-4 border-black rounded-md">
                 <AccordionTitle title={props.titleValue} onClick = {props.onClickMyFn}/>
                 {!props.collapsed && <AccordionBody/>}
             </div>
@@ -31,13 +31,10 @@ function AccordionTitle(props: AccordionTitlePropsType) {
 function AccordionBody() {
     console.log("AccordionBody rendering")
     return (
-        <ul className="pb-3 font-bold">
-            <li>1 Item One</li>
-            <li>2 Item Two</li>
-            <li>3 Item Three</li>
+        <ul className="pb-3 font-bold text-left">
+            <li className="py-1">✔ Cандерс Баскет оригинальный</li>
+            <li className="py-1">✔ Шефбургер де Люкс оригинальный</li>
+            <li className="py-1">✔ Твистер оригинальный</li>
         </ul>
     );
 }
-
-
-export default Accordion;

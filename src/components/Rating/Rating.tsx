@@ -1,5 +1,6 @@
 import React from "react";
-
+import redHeart from './assets/img/heart-red.png'
+import whiteHeart from './assets/img/heart-white.png'
 
 export type RatingValueType = 0 | 1 | 2 | 3 | 4| 5;
 
@@ -10,9 +11,6 @@ export type RatingPropsValue = {
 };
 
 export function Rating(props: RatingPropsValue) {
-
-
-
 
     return (
         <div className="mb-16">
@@ -34,8 +32,8 @@ type StarPropsType = {
 function Star(props: StarPropsType) {
 
     return (
-          <span className="text-5xl cursor-pointer" onClick={() => props.onStarClick(props.value)}>
-          {props.selected ? "❤" : "🤍"}</span>
+          <span className="cursor-pointer" onClick={() => props.onStarClick(props.value)}>
+          {props.selected ? <img src={redHeart} alt={"1"} className="inline-block w-16 h-16 p-1"/> : <img src={whiteHeart} alt={"0"} className="inline-block w-16 h-16 p-1"/> }</span>
     )
 
 }
