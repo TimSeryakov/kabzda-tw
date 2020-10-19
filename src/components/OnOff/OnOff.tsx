@@ -9,8 +9,8 @@ type PropsType = {
 export function OnOff(props: PropsType) {
 
 
-  const onStyle = `cursor-pointer mx-3 w-16 h-16 border-4 border-black inline-block pt-4 rounded-md ${props.value ? "bg-green-500" : "bg-white"}`
-  const offStyle = `cursor-pointer mx-3 w-16 h-16 border-4 border-black inline-block pt-4 rounded-md ${props.value ? "bg-white" : "bg-red-500"}`
+  const onStyle = `select-none cursor-pointer mx-3 w-16 h-16 border-4 border-black inline-block pt-4 rounded-md ${props.value ? "bg-green-500" : "bg-white"}`
+  const offStyle = `select-none cursor-pointer mx-3 w-16 h-16 border-4 border-black inline-block pt-4 rounded-md ${props.value ? "bg-white" : "bg-red-500"}`
   const indicatorStyle = `mx-3 text-5xl` // ${props.value ? "bg-green-800" : "bg-red-600"}
 
 

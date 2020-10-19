@@ -25,15 +25,6 @@ module.exports = {
     extend: {
       colors: {
         "theme-bg-primary": "#20252c", // bg main
-        "theme-bg-secondary": "#262b32", // bg secondary
-        "theme-bg-third": "#1d2229", // bg third
-        "theme-text": "#7b828b", // text
-        "theme-border": "#161a20", // borders
-        "theme-accent": "#bd93f9", // accent
-        "theme-accent-alternative": "#4e4ad8", // accent
-        "theme-placeholder": "#1b1f25", // placeholder
-        "theme-badge": "#2b3037", // BETA badge
-        "theme-white": "#ffffff", // bugfix?
       },
     },
     fontFamily: {
@@ -41,9 +32,12 @@ module.exports = {
       "ubuntu": ["Ubuntu", ...defaultTheme.fontFamily.sans],
     },
   },
-  variants: {},
+  variants: {
+    boxShadow: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+  },
   corePlugins: {
     container: false,
+    boxShadow: true
   },
   plugins: [
     /*  require("tailwindcss-pixel-dimensions")({
