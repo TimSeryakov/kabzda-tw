@@ -5,7 +5,7 @@ import {Accordion} from "./Accordion";
 import {action} from "@storybook/addon-actions";
 
 export default {
-  title: 'Accordion stories',
+  title: 'AccordionWithReducer stories',
   component: Accordion,
 };
 
@@ -18,12 +18,12 @@ const AccordionItems = [
 const callbackFn = action('Clicked!')
 const onclickCb = action('Some item was clicked!')
 
-export const accordionOpen = () => <Accordion titleValue={"Accordion Open"} collapsed={false} onChange={callbackFn} items={AccordionItems} onClickFn={onclickCb}/>
-export const accordionClosed = () => <Accordion titleValue={"Accordion Closed"} collapsed={true} onChange={callbackFn} items={[]} onClickFn={onclickCb}/>
+export const accordionOpen = () => <Accordion titleValue={"AccordionWithReducer Open"} collapsed={false} onChange={callbackFn} items={AccordionItems} onClickFn={onclickCb}/>
+export const accordionClosed = () => <Accordion titleValue={"AccordionWithReducer Closed"} collapsed={true} onChange={callbackFn} items={[]} onClickFn={onclickCb}/>
 
 export const ModeChanging = () => {
   const [value, setValue] = useState<boolean>(true)
-  return <Accordion titleValue={"Accordion in Action"} collapsed={value} onChange={() => setValue(!value)}
+  return <Accordion titleValue={"AccordionWithReducer in Action"} collapsed={value} onChange={() => setValue(!value)}
                     items={AccordionItems}
                     onClickFn={(value) => alert(`user with ID ${value}`)}/>
 };

@@ -10,7 +10,8 @@ export type RatingPropsValue = {
     onStarClick: (t: RatingValueType) => void
 };
 
-export function Rating(props: RatingPropsValue) {
+export const Rating = React.memo(RatingSecret)
+export function RatingSecret(props: RatingPropsValue) {
 
     return (
         <div className="mb-16">

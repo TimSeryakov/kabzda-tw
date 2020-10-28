@@ -11,7 +11,9 @@ type SelectPropsType = {
   items: Array<ItemType>
 }
 
-export function Select (props: SelectPropsType) {
+export const Select = React.memo(SelectSecret)
+
+export function SelectSecret(props: SelectPropsType) {
   const [active, setActive] = useState(false)
   const toggleItems = () => setActive(!active)
   const [hoveredElementValue, setHoveredElementValue] = useState(props.value)

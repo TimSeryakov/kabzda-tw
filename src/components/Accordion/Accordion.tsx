@@ -1,4 +1,5 @@
 import React from "react";
+import {UsersSecret} from "../../stories/ReactMemo.stories";
 
 type AccordionPropsType = {
   titleValue: string
@@ -18,7 +19,9 @@ type AccordionBodyItemsType = {
   value: any
 }
 
-export function Accordion(props: AccordionPropsType) {
+export const Accordion = React.memo(AccordionSecret)
+
+export function AccordionSecret(props: AccordionPropsType) {
   return (
       <div className="px-3 bg-gray-200 border-4 border-black rounded-md">
         <AccordionTitle title={props.titleValue} onClick={props.onChange}/>
