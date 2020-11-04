@@ -4,16 +4,16 @@ export default {
   title: "React.memo.demo"
 }
 
-export const NewMessagesCounter = (props: { count: number }) => {
+const NewMessagesCounter = (props: { count: number }) => {
   return <div>{props.count}</div>
 }
-export const UsersSecret = (props: {users: Array<string> }) => {
+const UsersSecret = (props: {users: Array<string> }) => {
   return <div>{props.users.map((u, i) => <div key={i}>{u}</div>)}</div>
 }
 
-export const Users = React.memo(UsersSecret)
+const Users = React.memo(UsersSecret)
 
-export const Example1 = () => {
+export const ReactMemoHOC = () => {
   const [counter, setCounter] = useState(0)
   const [users, setUsers] = useState(["merry", "flatten", "formal", "hurry", "bribe"])
 
@@ -22,10 +22,10 @@ export const Example1 = () => {
     setUsers(newUsers)
   }
 
-  return <>
-    <button onClick={() => {setCounter(counter + 1)}}>+</button>
-    <button onClick={addUser}>add user</button>
-    <NewMessagesCounter count={counter}/>
-    <Users users={users}/>
-    </>
+  return <div>
+      <button onClick={() => {setCounter(counter + 1)}} className={"border m-3 p-3"}>+</button>
+      <button onClick={addUser} className={"border m-3 p-3"}>add user</button>
+      <NewMessagesCounter count={counter}/>
+      <Users users={users}/>
+    </div>
 }
