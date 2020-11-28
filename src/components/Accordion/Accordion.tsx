@@ -1,6 +1,4 @@
 import React from "react";
-import {UsersSecret} from "../../stories/ReactMemo.stories";
-
 type AccordionPropsType = {
   titleValue: string
   collapsed: boolean

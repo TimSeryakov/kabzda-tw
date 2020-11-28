@@ -1,3 +1,6 @@
+// HOC React.memo
+// https://youtu.be/9cCL92uiMaw
+
 import React, {useState} from 'react'
 
 export default {
